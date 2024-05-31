@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import AceEditor from 'react-ace';
 import 'ace-builds/webpack-resolver';
-import 'ace-builds/src-noconflict/mode-c_cpp';
+import 'ace-builds/src-noconflict/mode-javascript';
 import 'ace-builds/src-noconflict/theme-github';
 
 
@@ -39,7 +39,7 @@ const CodeEditor =({initialCode}) =>{
 
         <div>
             <AceEditor
-                mode="c_cpp"
+                mode="javascript"
                 theme='github'
                 value={code}
                 onChange={handleCodeChange}
