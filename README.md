@@ -1,1 +1,0 @@
-Repo to ease revision of algorithm questions.
