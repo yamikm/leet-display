@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import CodeEditor from './CodeEditor';
 
 import options from './SetOptions'
@@ -6,10 +6,21 @@ import options from './SetOptions'
 
 function App() {
   const [selected, setSelected] = useState("");
-  
+  const [data, setData] = useState("");
   const selectOption = (option) =>{
     setSelected(option);
+    
   };
+
+  useEffect( () => {
+    async function fetchData(){
+      var response = await fetch(options[selected]);
+      var text = await response.text();
+      setData(text);
+    }
+    fetchData();
+    
+  },[selected] );
   console.log("OPTIONS:" , options)
  
   return (
@@ -38,7 +49,7 @@ function App() {
       {
         selected && (
           <div>
-            <CodeEditor initialCode={options[selected]} rows="10" cols="50" />
+            <CodeEditor initialCode={data} rows="10" cols="50" />
           </div>
       )}
       </div>
