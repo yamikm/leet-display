@@ -5,6 +5,7 @@ import options from './SetOptions'
 
 
 function App() {
+  const URL = "https://raw.githubusercontent.com/yamikm/leet-display/main/src/algorithms/";
   const [selected, setSelected] = useState("");
   const [data, setData] = useState("");
   const selectOption = (option) =>{
@@ -14,7 +15,7 @@ function App() {
 
   useEffect( () => {
     async function fetchData(){
-      var response = await fetch(options[selected]);
+      var response = await fetch(URL + options[selected]);
       var text = await response.text();
       setData(text);
     }
