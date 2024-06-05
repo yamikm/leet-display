@@ -57,6 +57,13 @@ vector<vector<int>> permute(vector<int>& nums) {
 }
 
 //Second Method;
+/*
+    contraints is nums[i] will be less than 11. 
+    take vector<int> will all elements as 11. 
+    move nums[idx] to all the positions-> 0-> nums.size()
+    and do recursion.
+*/
+
 vector<vector<int>> out;
 void rec(vector<int>& nums, vector<int> curr, int idx){
     if(idx == nums.size()){
