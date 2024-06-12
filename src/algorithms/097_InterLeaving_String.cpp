@@ -150,24 +150,37 @@ bool is_Interleave(string s1, int i, string s2, int j, string s3, int k,
         
         return ans;
 }
-
+/**
+ * Determines if the characters of s1 and s2 can be interleaved to form s3.
+ *
+ * @param s1 The first string to interleave.
+ * @param s2 The second string to interleave.
+ * @param s3 The string to check if it can be formed by interleaving s1 and s2.
+ *
+ * @return True if s3 can be formed by interleaving s1 and s2, false otherwise.
+ *
+ * 
+ */
 bool is_Interleave_iterative(string s1, string s2, string s3) {
-    int n1 = s1.length(), n2 = s2.length(), n3 = s3.length();
-    if (n1 + n2 != n3) return false;
-
-    vector<vector<int>> dp(n1+1, vector<int>(n2+1, 0));
-    dp[0][0] = true;
-
-    for (int i = 0; i <= n1; i++) {
-        for (int j = 0; j <= n2; j++) {
-            if (i > 0 && dp[i-1][j] && s1[i-1] == s3[i+j-1]) {
-                dp[i][j] = true;
+    if(s1.size() + s2.size() != s3.size()) return false;
+    vector<bool> dp(s2.size() + 1 , 0);
+   
+    for(int i= 0; i<= s1.size(); i++){
+        for(int j = 0; j <= s2.size() ; j++ ){
+            if (i == 0 && j == 0) {
+                dp[j] = true;
+            } else if (i == 0) {
+                dp[j] = dp[j - 1] && s2[j - 1] == s3[i + j - 1];
+            } else if (j == 0) {
+                dp[j] = dp[j] && s1[i - 1] == s3[i + j - 1];
             }
-            if (j > 0 && dp[i][j-1] && s2[j-1] == s3[i+j-1]) {
-                dp[i][j] = true;
+            else if (  (dp[j] && s1[i - 1] == s3[i + j - 1]) ||
+                        (dp[j - 1] && s2[j - 1] == s3[i + j - 1]) ) {
+                dp[j] = true;
+            }else{
+                dp[j] = false;
             }
         }
     }
-
-    return dp[n1][n2];
+    return dp[s2.size()];
 }
