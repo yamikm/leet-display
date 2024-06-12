@@ -4,7 +4,7 @@ const links = {
     "002. Add Two Numbers LL" :   '002_Add_two_numbers_linked_list.cpp',
     "077. Combination Sum" :  '077_Combination.cpp',
     "046. Permutation" : '046_Permutation.cpp',
-    "097. Interleaving String" : '097_Interleaving_String.cpp',
+    "097. Interleaving String" : '097_InterLeaving_String.cpp',
 
 };
 export default links;
