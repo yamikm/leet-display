@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/leet-display/static/js/main.a9f839f1.js",
+    "main.js": "/leet-display/static/js/main.cd0d4590.js",
     "worker-xquery.js": "/leet-display/7a1a62fec334f0f103a8f7126d402e0e.js",
     "mode-php_laravel_blade.js": "/leet-display/a1e328447b113f17ea503a4764384b13.js",
     "worker-javascript.js": "/leet-display/42971365b635d099414b59fd789a7cde.js",
@@ -471,9 +471,9 @@
     "ftl.js": "/leet-display/f76ee9c8abfdd96fb9d70116d40435d5.js",
     "d.js": "/leet-display/c98e74fc97b04fe8bf43dcdff549afcf.js",
     "mode-text.js": "/leet-display/0ffb18fb70c87335edee31a479f58a43.js",
-    "main.a9f839f1.js.map": "/leet-display/static/js/main.a9f839f1.js.map"
+    "main.cd0d4590.js.map": "/leet-display/static/js/main.cd0d4590.js.map"
   },
   "entrypoints": [
-    "static/js/main.a9f839f1.js"
+    "static/js/main.cd0d4590.js"
   ]
 }
