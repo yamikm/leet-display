@@ -6,6 +6,7 @@ const links = {
     "046. Permutation" : '046_Permutation.cpp',
     "097. Interleaving String" : '097_InterLeaving_String.cpp',
     "198. House Robber" : '198_House_Robber.cpp',
+    "746. Min Cost Climbing Stairs" : '746_Min_Cost_Climbing_Stairs.cpp',
 
 };
 export default links;
