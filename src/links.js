@@ -7,6 +7,9 @@ const links = {
     "097. Interleaving String" : '097_InterLeaving_String.cpp',
     "198. House Robber" : '198_House_Robber.cpp',
     "746. Min Cost Climbing Stairs" : '746_Min_Cost_Climbing_Stairs.cpp',
+    "1137. N-th Tribonacci Number" : '1137_Nth_Tribonacci_Number.cpp',
+    "740. Delete and Earn **" : '740_Delete_and_Earn.cpp',
+
 
 };
 export default links;
