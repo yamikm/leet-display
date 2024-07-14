@@ -3,6 +3,8 @@ import AceEditor from 'react-ace';
 import 'ace-builds/webpack-resolver';
 import 'ace-builds/src-noconflict/mode-c_cpp';
 import 'ace-builds/src-noconflict/theme-ambiance';
+import 'ace-builds/src-noconflict/theme-monokai';
+
 
 
 const CodeEditor =({initialCode}) =>{
@@ -40,7 +42,7 @@ const CodeEditor =({initialCode}) =>{
         <div>
             <AceEditor
                 mode="c_cpp"
-                theme='ambiance'
+                theme='monokai'
                 value={code}
                 onChange={handleCodeChange}
                 name='UNIQUE_ID_OF_DIV'
